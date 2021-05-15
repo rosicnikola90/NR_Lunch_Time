@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol NRRestourantManagerDelegate <NSObject>
 
 - (void)reastourantArrayCreated:(NSArray<NRRestourant *> *)restourants;
-- (void)updatedRestourantImage:(UIImage *)image atIndexPath:(NSIndexPath *)indexPath;
+- (void)updatedRestourantImage:(NSData *)imageData atIndexPath:(NSIndexPath *)indexPath;
+- (void)restourantUpdateResultWithError:(NSError *)error;
 
 @end
 
@@ -23,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id <NRRestourantManagerDelegate> delegate;
 
 - (void)updateRestourantListFromWebWithURL:(NSString *)urlString;
-- (void)getImageForRestourantURL:(NSString *)urlString atIndex:(NSIndexPath *)indexPath;
+- (void)getImageDataForRestourantURL:(NSString *)urlString atIndex:(NSIndexPath *)indexPath;
 
 @end
 

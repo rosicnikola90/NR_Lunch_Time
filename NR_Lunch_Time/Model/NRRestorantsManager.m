@@ -57,19 +57,18 @@
     return newRestourant;
 }
 
-- (void)getImageForRestourantURL:(NSString *)urlString atIndex:(NSIndexPath *)indexPath
+- (void)getImageDataForRestourantURL:(NSString *)urlString atIndex:(NSIndexPath *)indexPath
 {
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     NSURLSession *urlSession = NSURLSession.sharedSession;
     [[urlSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
     {
-        UIImage *image = [UIImage imageWithData:data];
         NSIndexPath *indexP = indexPath;
-        if (image != nil)
+        if (data != nil)
         {
             if (self.delegate != nil)
             {
-                [self.delegate updatedRestourantImage:image atIndexPath:indexP];
+                [self.delegate updatedRestourantImage:data atIndexPath:indexP];
             }
         }
     }] resume];
@@ -100,13 +99,14 @@
             }
             else
             {
-                
+                NSLog(@"error during serialization :%@", err.localizedDescription);
             }
         }
         else
         {
-        //error handling
-        NSLog(@"%@" , error.localizedDescription);
+            if (self.delegate != nil) {
+                [self.delegate restourantUpdateResultWithError:error];
+            }
         }
     }] resume];
 }

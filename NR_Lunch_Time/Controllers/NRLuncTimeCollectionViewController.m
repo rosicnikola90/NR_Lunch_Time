@@ -26,7 +26,6 @@ static NSString * const reuseIdentifier = @"NRcell";
     [super viewDidLoad];
     [self.activityIndicator setHidesWhenStopped:true];
     [self.collectionView registerNib:[UINib nibWithNibName:@"NRCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
-    [self managingManager];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -36,12 +35,15 @@ static NSString * const reuseIdentifier = @"NRcell";
     {
         [self.activityIndicator startAnimating];
     }
+    [self createRestourantManagerAndGetRestourantDataFromWeb];
 }
 
-- (void)managingManager
+- (void)createRestourantManagerAndGetRestourantDataFromWeb
 {
-    self.manager = NRRestorantsManager.new;
-    self.manager.delegate = self;
+    if (self.manager == nil) {
+        self.manager = NRRestorantsManager.new;
+        self.manager.delegate = self;
+    }
     [self.manager updateRestourantListFromWebWithURL:urlToRestourants];
 }
 
@@ -50,36 +52,18 @@ static NSString * const reuseIdentifier = @"NRcell";
     NSLog(@"To be continued..");
 }
 
-- (void)updatedRestourantImage:(UIImage *)image atIndexPath:(NSIndexPath *)indexPath
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.restourants[indexPath.row].backgroundImageWithURL.restourantImage = image;
-        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
-    });
-}
-
-- (void)reastourantArrayCreated:(NSArray<NRRestourant *> *)restourants
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (restourants != nil) {
-            self.restourants = restourants;
-            [self.activityIndicator stopAnimating];
-            [self.collectionView reloadData];
-        }
-    });
-}
-
 - (void)updateCell:(NRCollectionViewCell *)cell WithRestourantData:(NRRestourant *)restourant
 {
     cell.restourantNameLbl.text = restourant.name;
     cell.categoryTypeLbl.text = restourant.category;
-    if (restourant.backgroundImageWithURL.restourantImage == nil)
+    if (restourant.backgroundImageWithURL.restourantImageData == nil)
     {
         cell.restourantImage.image = [UIImage imageNamed:@"cellGradientBackground"];
     }
     else
     {
-    cell.restourantImage.image = restourant.backgroundImageWithURL.restourantImage;
+        UIImage *image = [UIImage imageWithData:restourant.backgroundImageWithURL.restourantImageData];
+        cell.restourantImage.image = image;
     }
 }
 
@@ -111,9 +95,9 @@ static NSString * const reuseIdentifier = @"NRcell";
     {
         NRRestourant *rest = self.restourants[indexPath.row];
         [self updateCell:cell WithRestourantData:rest];
-        if (rest.backgroundImageWithURL.restourantImage == nil)
+        if (rest.backgroundImageWithURL.restourantImageData == nil)
         {
-            [self.manager getImageForRestourantURL:rest.backgroundImageWithURL.imageURL atIndex:indexPath];
+            [self.manager getImageDataForRestourantURL:rest.backgroundImageWithURL.imageURL atIndex:indexPath];
         }
     }
     return cell;
@@ -137,6 +121,42 @@ static NSString * const reuseIdentifier = @"NRcell";
 {
     self.selectedRestourant = self.restourants[indexPath.row];
     [self performSegueWithIdentifier:@"showDetail" sender:self];
+}
+
+#pragma mark <NRRestouantManagerDelegate>
+
+- (void)updatedRestourantImage:(NSData *)imageData atIndexPath:(NSIndexPath *)indexPath
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.restourants[indexPath.row].backgroundImageWithURL.restourantImageData = imageData;
+        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    });
+}
+
+- (void)reastourantArrayCreated:(NSArray<NRRestourant *> *)restourants
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (restourants != nil)
+        {
+            self.restourants = restourants;
+            [self.activityIndicator stopAnimating];
+            [self.collectionView reloadData];
+        }
+    });
+}
+
+- (void)restourantUpdateResultWithError:(NSError *)error
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"ERROR" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"reload" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            __weak NRLuncTimeCollectionViewController *weakSelf = self;
+            [weakSelf createRestourantManagerAndGetRestourantDataFromWeb];
+        }];
+        [self.activityIndicator stopAnimating];
+        [alertController addAction:action];
+        [self presentViewController:alertController animated:true completion:nil];
+    });
 }
 
 @end

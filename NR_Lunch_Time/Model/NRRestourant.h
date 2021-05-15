@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) NSString *latitude;
 @property (nonatomic, readonly, nullable) NSString *longitude;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

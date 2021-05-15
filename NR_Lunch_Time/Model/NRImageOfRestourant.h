@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NRImageOfRestourant : NSObject
 
-@property (nonatomic, nullable) UIImage *restourantImage;
+@property (nonatomic, nullable) NSData *restourantImageData;
 @property (nonatomic, readonly, nullable) NSString *imageURL;
 
 @end
