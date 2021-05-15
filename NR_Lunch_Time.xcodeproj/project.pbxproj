@@ -7,25 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3FD3C1264C76220049A169 /* NRImageOfRestourant.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3FD3C0264C76220049A169 /* NRImageOfRestourant.m */; };
+		FA4FD6602647368900C03FDD /* NRNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4FD65F2647368900C03FDD /* NRNavigationViewController.m */; };
+		FA5C03EA264876BE00C36CB4 /* NRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5C03E9264876BE00C36CB4 /* NRConstants.m */; };
+		FA5EE50C2647CC410056F3C8 /* NRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5EE50A2647CC410056F3C8 /* NRCollectionViewCell.m */; };
+		FA5EE50D2647CC410056F3C8 /* NRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5EE50B2647CC410056F3C8 /* NRCollectionViewCell.xib */; };
+		FA5EE5122647E5F10056F3C8 /* NRRestorantsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5EE5112647E5F10056F3C8 /* NRRestorantsManager.m */; };
+		FA5EE5152647E6250056F3C8 /* NRRestourant.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5EE5142647E6250056F3C8 /* NRRestourant.m */; };
+		FA6AD2B7264DBC4300025387 /* NRShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6AD2B6264DBC4300025387 /* NRShowDetailViewController.m */; };
+		FA6AD2BA264DC8B500025387 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6AD2B9264DC8B400025387 /* MapKit.framework */; };
 		FAFE71CE2646DD2600F26E14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFE71CD2646DD2600F26E14 /* AppDelegate.m */; };
-		FAFE71D12646DD2600F26E14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFE71D02646DD2600F26E14 /* ViewController.m */; };
 		FAFE71D42646DD2600F26E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFE71D22646DD2600F26E14 /* Main.storyboard */; };
 		FAFE71D62646DD2800F26E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFE71D52646DD2800F26E14 /* Assets.xcassets */; };
 		FAFE71D92646DD2800F26E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFE71D72646DD2800F26E14 /* LaunchScreen.storyboard */; };
 		FAFE71DC2646DD2800F26E14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFE71DB2646DD2800F26E14 /* main.m */; };
+		FAFE71E72646E10700F26E14 /* NRLuncTimeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFE71E62646E10700F26E14 /* NRLuncTimeCollectionViewController.m */; };
+		FAFE71EA2646E13100F26E14 /* NRInternetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFE71E92646E13100F26E14 /* NRInternetViewController.m */; };
+		FAFE71EE2646E8B900F26E14 /* NRTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFE71ED2646E8B900F26E14 /* NRTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3FD3BF264C76220049A169 /* NRImageOfRestourant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRImageOfRestourant.h; sourceTree = "<group>"; };
+		FA3FD3C0264C76220049A169 /* NRImageOfRestourant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRImageOfRestourant.m; sourceTree = "<group>"; };
+		FA4FD65E2647368900C03FDD /* NRNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRNavigationViewController.h; sourceTree = "<group>"; };
+		FA4FD65F2647368900C03FDD /* NRNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRNavigationViewController.m; sourceTree = "<group>"; };
+		FA5C03E8264876BE00C36CB4 /* NRConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRConstants.h; sourceTree = "<group>"; };
+		FA5C03E9264876BE00C36CB4 /* NRConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRConstants.m; sourceTree = "<group>"; };
+		FA5EE5092647CC410056F3C8 /* NRCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRCollectionViewCell.h; sourceTree = "<group>"; };
+		FA5EE50A2647CC410056F3C8 /* NRCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRCollectionViewCell.m; sourceTree = "<group>"; };
+		FA5EE50B2647CC410056F3C8 /* NRCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA5EE5102647E5F10056F3C8 /* NRRestorantsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRestorantsManager.h; sourceTree = "<group>"; };
+		FA5EE5112647E5F10056F3C8 /* NRRestorantsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRestorantsManager.m; sourceTree = "<group>"; };
+		FA5EE5132647E6250056F3C8 /* NRRestourant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRRestourant.h; sourceTree = "<group>"; };
+		FA5EE5142647E6250056F3C8 /* NRRestourant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRRestourant.m; sourceTree = "<group>"; };
+		FA6AD2B5264DBC4300025387 /* NRShowDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRShowDetailViewController.h; sourceTree = "<group>"; };
+		FA6AD2B6264DBC4300025387 /* NRShowDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRShowDetailViewController.m; sourceTree = "<group>"; };
+		FA6AD2B9264DC8B400025387 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FAFE71C92646DD2600F26E14 /* NR_Lunch_Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NR_Lunch_Time.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFE71CC2646DD2600F26E14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAFE71CD2646DD2600F26E14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAFE71CF2646DD2600F26E14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FAFE71D02646DD2600F26E14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FAFE71D32646DD2600F26E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAFE71D52646DD2800F26E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAFE71D82646DD2800F26E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAFE71DA2646DD2800F26E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAFE71DB2646DD2800F26E14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAFE71E52646E10700F26E14 /* NRLuncTimeCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRLuncTimeCollectionViewController.h; sourceTree = "<group>"; };
+		FAFE71E62646E10700F26E14 /* NRLuncTimeCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRLuncTimeCollectionViewController.m; sourceTree = "<group>"; };
+		FAFE71E82646E13100F26E14 /* NRInternetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRInternetViewController.h; sourceTree = "<group>"; };
+		FAFE71E92646E13100F26E14 /* NRInternetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRInternetViewController.m; sourceTree = "<group>"; };
+		FAFE71EC2646E8B900F26E14 /* NRTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRTabBarViewController.h; sourceTree = "<group>"; };
+		FAFE71ED2646E8B900F26E14 /* NRTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +64,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6AD2BA264DC8B500025387 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA5EE50E2647CCE20056F3C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAFE71D72646DD2800F26E14 /* LaunchScreen.storyboard */,
+				FAFE71D22646DD2600F26E14 /* Main.storyboard */,
+				FA5EE50B2647CC410056F3C8 /* NRCollectionViewCell.xib */,
+				FA5EE5092647CC410056F3C8 /* NRCollectionViewCell.h */,
+				FA5EE50A2647CC410056F3C8 /* NRCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA5EE50F2647E5B50056F3C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5EE5102647E5F10056F3C8 /* NRRestorantsManager.h */,
+				FA5EE5112647E5F10056F3C8 /* NRRestorantsManager.m */,
+				FA5EE5132647E6250056F3C8 /* NRRestourant.h */,
+				FA5EE5142647E6250056F3C8 /* NRRestourant.m */,
+				FA3FD3BF264C76220049A169 /* NRImageOfRestourant.h */,
+				FA3FD3C0264C76220049A169 /* NRImageOfRestourant.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA6AD2B8264DC8B400025387 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA6AD2B9264DC8B400025387 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAFE71C02646DD2500F26E14 = {
 			isa = PBXGroup;
 			children = (
 				FAFE71CB2646DD2600F26E14 /* NR_Lunch_Time */,
 				FAFE71CA2646DD2600F26E14 /* Products */,
+				FA6AD2B8264DC8B400025387 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,15 +126,33 @@
 			children = (
 				FAFE71CC2646DD2600F26E14 /* AppDelegate.h */,
 				FAFE71CD2646DD2600F26E14 /* AppDelegate.m */,
-				FAFE71CF2646DD2600F26E14 /* ViewController.h */,
-				FAFE71D02646DD2600F26E14 /* ViewController.m */,
-				FAFE71D22646DD2600F26E14 /* Main.storyboard */,
+				FA5C03E8264876BE00C36CB4 /* NRConstants.h */,
+				FA5C03E9264876BE00C36CB4 /* NRConstants.m */,
 				FAFE71D52646DD2800F26E14 /* Assets.xcassets */,
-				FAFE71D72646DD2800F26E14 /* LaunchScreen.storyboard */,
 				FAFE71DA2646DD2800F26E14 /* Info.plist */,
 				FAFE71DB2646DD2800F26E14 /* main.m */,
+				FA5EE50F2647E5B50056F3C8 /* Model */,
+				FA5EE50E2647CCE20056F3C8 /* Views */,
+				FAFE71EB2646E84900F26E14 /* Controllers */,
 			);
 			path = NR_Lunch_Time;
+			sourceTree = "<group>";
+		};
+		FAFE71EB2646E84900F26E14 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAFE71E52646E10700F26E14 /* NRLuncTimeCollectionViewController.h */,
+				FAFE71E62646E10700F26E14 /* NRLuncTimeCollectionViewController.m */,
+				FAFE71E82646E13100F26E14 /* NRInternetViewController.h */,
+				FAFE71E92646E13100F26E14 /* NRInternetViewController.m */,
+				FA6AD2B5264DBC4300025387 /* NRShowDetailViewController.h */,
+				FA6AD2B6264DBC4300025387 /* NRShowDetailViewController.m */,
+				FAFE71EC2646E8B900F26E14 /* NRTabBarViewController.h */,
+				FAFE71ED2646E8B900F26E14 /* NRTabBarViewController.m */,
+				FA4FD65E2647368900C03FDD /* NRNavigationViewController.h */,
+				FA4FD65F2647368900C03FDD /* NRNavigationViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5EE50D2647CC410056F3C8 /* NRCollectionViewCell.xib in Resources */,
 				FAFE71D92646DD2800F26E14 /* LaunchScreen.storyboard in Resources */,
 				FAFE71D62646DD2800F26E14 /* Assets.xcassets in Resources */,
 				FAFE71D42646DD2600F26E14 /* Main.storyboard in Resources */,
@@ -141,9 +226,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFE71D12646DD2600F26E14 /* ViewController.m in Sources */,
+				FA5EE5122647E5F10056F3C8 /* NRRestorantsManager.m in Sources */,
 				FAFE71DC2646DD2800F26E14 /* main.m in Sources */,
+				FA5EE50C2647CC410056F3C8 /* NRCollectionViewCell.m in Sources */,
+				FA4FD6602647368900C03FDD /* NRNavigationViewController.m in Sources */,
 				FAFE71CE2646DD2600F26E14 /* AppDelegate.m in Sources */,
+				FAFE71EA2646E13100F26E14 /* NRInternetViewController.m in Sources */,
+				FA6AD2B7264DBC4300025387 /* NRShowDetailViewController.m in Sources */,
+				FA3FD3C1264C76220049A169 /* NRImageOfRestourant.m in Sources */,
+				FAFE71E72646E10700F26E14 /* NRLuncTimeCollectionViewController.m in Sources */,
+				FAFE71EE2646E8B900F26E14 /* NRTabBarViewController.m in Sources */,
+				FA5EE5152647E6250056F3C8 /* NRRestourant.m in Sources */,
+				FA5C03EA264876BE00C36CB4 /* NRConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,13 +382,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S94WS5979X;
 				INFOPLIST_FILE = NR_Lunch_Time/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nikola.rosic.NR-Lunch-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,13 +400,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S94WS5979X;
 				INFOPLIST_FILE = NR_Lunch_Time/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "nikola.rosic.NR-Lunch-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

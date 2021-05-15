@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NRConstants.h"
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface NRInternetViewController : UIViewController <UIWebViewDelegate>
 
 @end
 
+NS_ASSUME_NONNULL_END
